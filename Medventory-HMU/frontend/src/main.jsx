@@ -1,15 +1,11 @@
-// File: main.jsx (Đã sửa để hiển thị IssuePage từ thư mục components)
-
 import React from "react";
 import ReactDOM from "react-dom/client";
-// 1. Sửa import và đường dẫn: Import IssuePage từ thư mục components
-import IssuePage from "./components/IssuePage.jsx"; 
+import App from "./App.jsx"; 
 import "./index.css"; 
 import { Toaster } from "react-hot-toast"; 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* Toaster để hiển thị toast toàn app */}
     <Toaster
       position="top-right"
       toastOptions={{
@@ -27,7 +23,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         },
       }}
     />
-    {/* 2. Render component IssuePage */}
-    <IssuePage /> 
+    <App /> 
   </React.StrictMode>
 );
