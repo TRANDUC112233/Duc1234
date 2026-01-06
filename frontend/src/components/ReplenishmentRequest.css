@@ -1,0 +1,225 @@
+/* ============ ROOT CONTAINER ============ */
+.req-root {
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+/* Center trên màn hình lớn */
+@media (min-width: 1024px) {
+  .req-root {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Tiêu đề */
+.req-root h3 {
+  margin: 0 0 20px 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* ============ FORM ============ */
+.req-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Field chung */
+.req-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.req-field label {
+  font-weight: 500;
+  color: #374151;
+}
+
+.req-field.full textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.req-field textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background: white;
+}
+
+/* Half width field */
+.req-field.half {
+  display: inline-block;
+  width: 48%;
+  margin-right: 2%;
+}
+
+.req-field.half select {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  background: white;
+  color: #111827;
+  transition: border-color 0.2s ease;
+}
+
+.req-field.half select:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+/* ============ TABLE ============ */
+.req-table-wrap {
+  overflow-x: auto;
+}
+
+.req-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background: white;
+  border-radius: 8px;
+}
+
+.req-table th {
+  background: #3b82f6;
+  color: white;
+  padding: 10px;
+  font-weight: 600;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.3);
+}
+
+.req-table th:last-child {
+  border-right: none;
+}
+
+.req-table td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+}
+
+.req-table select,
+.req-table input {
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.req-table input:focus,
+.req-table select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background: white;
+}
+
+.req-table input[readonly] {
+  background: #f3f4f6;
+  cursor: not-allowed;
+}
+
+select option {
+  color: black !important;
+  background: white !important;
+}
+
+/* ============ ACTION BUTTONS ============ */
+.req-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn.primary {
+  background: #3b82f6;
+  color: white;
+}
+.btn.primary:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+.btn.secondary:hover {
+  background: #f3f4f6;
+}
+
+.btn.delete {
+  background: #ef4444;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+.btn.delete:hover {
+  background: #dc2626;
+}
+.btn.delete.disabled {
+  background: #9ca3af !important;
+  cursor: not-allowed !important;
+}
+
+/* ============ EMPTY STATE ============ */
+.req-table tbody tr td[colspan] {
+  text-align: center;
+  padding: 20px;
+  color: #6b7280;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+  .req-root {
+    padding: 16px;
+  }
+
+  .req-field.half {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .req-table {
+    font-size: 13px;
+  }
+
+  .req-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

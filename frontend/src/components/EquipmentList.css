@@ -1,0 +1,161 @@
+/* =========================
+   ROOT / CARD
+========================= */
+.el-root {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(2, 6, 23, 0.06);
+  overflow: hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+.el-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+.el-header h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* =========================
+   ACTIONS
+========================= */
+.el-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.el-export {
+  background: #10b981;
+  color: #ffffff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.el-export:hover {
+  background: #059669;
+}
+
+.el-filter {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #374151;
+  outline: none;
+}
+
+.el-filter:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* =========================
+   TABLE
+========================= */
+.el-table-wrap {
+  overflow-x: auto;
+}
+
+.el-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.el-table thead th {
+  background: #f9fafb;
+  text-align: left;
+  padding: 12px 16px;
+  color: #6b7280;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.el-table td {
+  padding: 12px 16px;
+  border-top: 1px solid #f3f4f6;
+  color: #0f172a;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.el-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.el-actions-col {
+  display: flex;
+  gap: 10px;
+}
+
+/* =========================
+   LINK BUTTONS
+========================= */
+.link {
+  background: transparent;
+  border: none;
+  color: #2563eb;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 0;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link.danger {
+  color: #ef4444;
+}
+
+.link.danger:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   STATUS BADGES
+========================= */
+.st-badge {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.st-badge.green {
+  background: #ecfdf5;
+  color: #065f46;
+}
+
+.st-badge.yellow {
+  background: #fffbeb;
+  color: #92400e;
+}
+
+.st-badge.red {
+  background: #fff1f2;
+  color: #7f1d1d;
+}
+
+.st-badge.gray {
+  background: #f3f4f6;
+  color: #374151;
+}

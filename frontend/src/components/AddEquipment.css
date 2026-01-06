@@ -1,14 +1,14 @@
-/* ============ ADD EQUIPMENT FORM (FULL WIDTH + CĂN CHUẨN) ============ */
+/* ============ ADD EQUIPMENT FORM (SYNC THEME) ============ */
 .ae-root {
   width: 100%;
   height: 100%;
-  background: white;
-  border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(2, 6, 23, 0.04);
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(2, 6, 23, 0.06);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 2rem 2.5rem; /* khớp padding container chính */
+  padding: 2rem 2.5rem;
   box-sizing: border-box;
 }
 
@@ -17,19 +17,24 @@
   .ae-root {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1100px; /* khung tương tự max-w-7xl */
+    max-width: 1100px;
   }
 }
 
+/* =========================
+   TITLE
+========================= */
 .ae-root h3 {
   margin: 0 0 1.25rem 0;
   font-size: 1.4rem;
   font-weight: 700;
-  color: #1e3a8a;
+  color: #0f172a; /* đồng bộ Admin / Dashboard */
   text-align: left;
 }
 
-/* FORM LAYOUT */
+/* =========================
+   FORM LAYOUT
+========================= */
 .ae-form {
   display: flex;
   flex-direction: column;
@@ -41,6 +46,7 @@
   grid-template-columns: 1fr;
   gap: 1.2rem;
 }
+
 @media (min-width: 900px) {
   .ae-form .ae-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -58,9 +64,9 @@
 }
 
 .ae-field label {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  color: #1f2937;
+  color: #374151;
 }
 
 .ae-field input,
@@ -68,10 +74,11 @@
 .ae-field textarea {
   padding: 0.75rem 1rem;
   border-radius: 10px;
-  border: 1px solid #d1d5db;
+  border: 1px solid #e5e7eb;
   font-size: 0.95rem;
   background: #f9fafb;
-  transition: border-color 0.2s ease, background 0.2s ease;
+  color: #0f172a;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .ae-field input:focus,
@@ -80,9 +87,12 @@
   outline: none;
   border-color: #2563eb;
   background: #ffffff;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
 }
 
-/* ACTIONS */
+/* =========================
+   ACTIONS
+========================= */
 .ae-actions {
   display: flex;
   justify-content: flex-end;
@@ -96,13 +106,15 @@
   border: none;
   cursor: pointer;
   font-weight: 600;
+  font-size: 14px;
   transition: all 0.2s ease;
 }
 
 .btn.primary {
   background: #2563eb;
-  color: white;
+  color: #ffffff;
 }
+
 .btn.primary:hover {
   background: #1d4ed8;
   transform: translateY(-1px);
@@ -113,15 +125,19 @@
   border: 1px solid #d1d5db;
   color: #374151;
 }
+
 .btn.cancel:hover {
   background: #f3f4f6;
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 600px) {
   .ae-root {
     padding: 1.25rem;
   }
+
   .ae-field input,
   .ae-field select,
   .ae-field textarea {
